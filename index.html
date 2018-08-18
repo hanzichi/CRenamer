@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CRenamer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      h1 {border-bottom: 1px dashed #999; margin-bottom: 30px; margin-top: 30px; padding-bottom: 10px;}
+      h1 span {font-size: 16px; border-bottom: 1px solid #999;}
+      h1 img {width: 45px; vertical-align: top}
+      .btn-choose-folder {margin-right: 15px}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-12">
+        <div class="row">
+          <h1 class="text-center">文件名批量修改工具
+            <span class="text-muted">specially for 👉<img src="./img/honey.jpeg"></span>
+          </h1>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputPrefix" class="col-sm-2 control-label">文件统一前缀</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrefix" placeholder="这里写文件名统一前缀">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSuffix" class="col-sm-2 control-label">文件统一后缀</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputSuffix" placeholder="这里写文件名统一后缀">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" data-checked=0> 是否删除原图名称<span class="text-muted">（勾选表示删除原图名称，取消则表示不删除）</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" data-checked=1> 递增数字是否从 1 开始<span class="text-muted">（勾选表示从 1 开始，取消则从 0 开始）</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" data-checked=1> 递增数字是否加在文件名末尾<span class="text-muted">（勾选表示加在末尾，取消则表示加在开头）</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="text-right">
+                <button type="button" class="btn btn-default btn-choose-folder">点击选择文件夹</button>
+              </div>
+            </div>
+          </form>
+          <hr>
+          <div class="help-block">
+            <h5>温馨提醒：</h5>
+            <ul>
+              <li><strong>文件批量重命名会在原文件上操作</strong>，并不会生成新的文件。如果要保留原文件，请复制一份进行操作</li>
+              <li>批量重命名默认只会操作所选文件夹一级目录下的文件</li>
+              <li>批量重命名会忽略所选文件夹一级目录下的文件夹和隐藏文件</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

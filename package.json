@@ -1,0 +1,19 @@
+{
+  "name": "CRenamer",
+  "version": "1.0.0",
+  "description": "an application that can rename all the files in one folder built by Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "repository": "https://github.com/hanzichi/CRenamer",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "hanzichi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
